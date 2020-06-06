@@ -13,7 +13,6 @@ export const PizzaPage: React.FC = () => {
     const getPizzas = useCallback(async () => {
         try {
             const data = await request('/api/pizzas', 'GET', null);
-            console.log({data});
             setState({pizzas: data})
         } catch (e) {
             console.error(e)
