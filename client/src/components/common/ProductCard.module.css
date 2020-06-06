@@ -1,0 +1,37 @@
+.cardDescription {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(115, 121, 140);
+}
+.cardDescriptionBlock {
+    flex: 1 1 auto;
+}
+.cardButtonBlock {
+    padding-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.counter {
+    position: absolute;
+    transform: translateX(50%);
+    right: 50%;
+    bottom: -20px;
+    font-size: 24px;
+}
+.counter p {
+    font-size:  14px;
+    color: #4646468c;
+    position: relative;
+    top: 8px;
+}
+.price {
+    font-size: 22px;
+    font-weight: bolder;
+}
+.currency {
+    font-size: 22px;
+    font-weight: bolder;
+    margin-left: 2px;
+}

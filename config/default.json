@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "jwtSecret": "stepan",
+  "mongoUri": "mongodb+srv://mashtapok:17101995@cluster0-8vewp.azure.mongodb.net/app?retryWrites=true&w=majority"
+}

@@ -1,0 +1,26 @@
+.modalContainer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-tap-highlight-color: transparent;
+}
+.modal {
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    flex: 0 1 35%;
+    min-width: 315px;
+    outline: none;
+    padding: 16px 32px 24px;
+    box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.header h1 {
+    font-size: 40px;
+}
