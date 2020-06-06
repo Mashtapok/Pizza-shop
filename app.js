@@ -19,7 +19,9 @@ if(process.env.NODE_ENV === "production") {
     })
 }
 
-const PORT = config.get("port") || 5000;
+// const PORT = config.get("port") || 5000;
+const PORT = process.env.PORT || 5000;
+
 
 async function start() {
     try{
@@ -28,7 +30,7 @@ async function start() {
             useUnifiedTopology: true,
             useCreateIndex: true
         });
-        app.listen(5000, () => console.log(`App on port ${PORT}`));
+        app.listen(PORT, () => console.log(`App on port ${PORT}`));
     } catch (e) {
         console.warn("Server Error", e.message);
         process.exit(1);
