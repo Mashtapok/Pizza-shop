@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import styles from "./ProductCard.module.css";
 import {useDispatch} from "react-redux";
-import {addToCart} from "../../Redux/actions/cartActions";
-import {CartItemType} from "../../types/types";
+import {addToCart, getTotalPriceActionType} from "../../Redux/actions/cartActions";
+import {CartItemType, ProductType} from "../../types/types";
 
 type PropsType = {
     id: number,
@@ -26,9 +26,11 @@ export const ProductCard:React.FC<PropsType> = ({id, title, price, description, 
         }
     }
 
-    const addHandler = (item: object, count: number): void => {
+    const addHandler = (item: ProductType, count: number): void => {
+        const {id} = item;
         let cartItem: CartItemType = {...item, count} as CartItemType;
         dispatch(addToCart(cartItem));
+        dispatch(getTotalPriceActionType(id));
         setCount(0);
     };
 

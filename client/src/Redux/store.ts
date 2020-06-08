@@ -15,7 +15,8 @@ export interface RootState {
                 image: string,
                 count: number
             }
-        ]
+        ],
+        totalPrice: number
     },
     auth : {
         token: string | null,

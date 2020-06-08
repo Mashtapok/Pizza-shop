@@ -83,3 +83,18 @@ main {
   background-color: #b40707;
   border-radius: 15px;
 }
+.sidenav-overlay {
+  left: 300px !important;
+}
+ul.right {
+  position: relative;
+}
+.totalCartPrice {
+  position: absolute;
+  top: 42px;
+  right: 40%;
+  line-height: 19px;
+  border-bottom: 1px solid #e65100;
+  text-align: center;
+  color: #e65100;
+}
