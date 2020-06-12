@@ -8,13 +8,6 @@ export const CartPage = () => {
     const items = useSelector((state:RootState) => state.cart.items);
     const filteredItem = items.filter(item => item.count > 0);
 
-    // useEffect(() => {
-    //    setTimeout(()=> {
-    //        console.log("filtered");
-    //        localStorage.setItem("cartItems", JSON.stringify(filteredItem))
-    //    }, 10)
-    // }, [filteredItem]);
-
     return (
         <div className="cart">
             <div className="header">
@@ -24,6 +17,7 @@ export const CartPage = () => {
                 {filteredItem.map(item => <CartItem key={item.id} id={item.id} title={item.title} price={item.price}
                                              description={item.description}
                                              image={item.image} count={item.count}/>)}
+                {!filteredItem.length  && <p>Ваша карзина пока что пустая</p>}
             </div>
         </div>
     );
