@@ -64,6 +64,7 @@ export const AuthModal: React.FC<Props> = (props) => {
                                    name="email"
                                    type="email"
                                    className="validate"
+                                   autoFocus
                                    onChange={changeHandler}
                             />
                             <label htmlFor="email">Email</label>

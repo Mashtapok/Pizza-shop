@@ -92,7 +92,7 @@ ul.right {
 .totalCartPrice {
   position: absolute;
   top: 42px;
-  right: 40%;
+  left: 27px;
   line-height: 19px;
   border-bottom: 1px solid #e65100;
   text-align: center;

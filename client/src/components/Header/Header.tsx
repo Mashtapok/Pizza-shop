@@ -15,7 +15,10 @@ export const Header: React.FC<Props> = (props) => {
     const totalCartPrice = useSelector((state:RootState) => state.cart.totalPrice);
 
     function handleOpen(event:React.MouseEvent, ref:any):void {
-        if (event.target === buttonRef.current || mobileButtonRef.current) {
+        if (event.target === buttonRef.current) {
+            setIsOpen(!isOpen)
+        }
+        if(event.target === mobileButtonRef.current) {
             setIsOpen(!isOpen)
         }
         if (event.target === ref.current) {
