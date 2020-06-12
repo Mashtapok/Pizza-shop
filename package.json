@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "cross-env NODE_ENV=production node app.js",
     "server": "nodemon app.js",
     "client": "npm run start --prefix client",
     "client:install": "npm install --prefix client",
@@ -35,6 +35,6 @@
     "nodemon": "^2.0.4"
   },
   "engines": {
-    "node": "13.12.0"
+    "node": "13.x"
   }
 }

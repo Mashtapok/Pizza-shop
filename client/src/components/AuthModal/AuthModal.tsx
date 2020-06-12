@@ -32,8 +32,8 @@ export const AuthModal: React.FC<Props> = (props) => {
             const data = await request(
                 '/api/auth/register',
                 'POST',
-                {...form})
-            const data2 = await request('/api/pizzas', 'GET', null)
+                {...form});
+            const data2 = await request('/api/pizzas', 'GET', null);
             console.log(data2)
         } catch (e) {
         }
