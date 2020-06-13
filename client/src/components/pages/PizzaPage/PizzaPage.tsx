@@ -17,11 +17,11 @@ export const PizzaPage: React.FC = () => {
         } catch (e) {
             console.error(e)
         }
-    }, [request]);
+    }, []);
 
     useEffect(() => {
         getPizzas();
-    }, [getPizzas]);
+    }, []);
 
     if (loading) {
         return <div>

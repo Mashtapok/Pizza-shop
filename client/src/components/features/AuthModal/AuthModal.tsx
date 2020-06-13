@@ -34,9 +34,7 @@ export const AuthModal: React.FC<Props> = (props) => {
                 'POST',
                 {...form});
             const data2 = await request('/api/pizzas', 'GET', null);
-            console.log(data2)
-        } catch (e) {
-        }
+        } catch (error) {}
     }
 
     async function loginHandler() {
@@ -46,13 +44,12 @@ export const AuthModal: React.FC<Props> = (props) => {
                 'POST',
                 {...form});
             props.login(data.token, data.userId);
-        } catch (e) {
-        }
+        } catch (error) {}
     }
 
     return (
         <div className={styles.modalContainer} ref={refModalContainer}
-             onClick={(event) => props.handleOpen(event, refModalContainer)}>
+             onMouseDown={(event) => props.handleOpen(event, refModalContainer)}>
             <form className={styles.modal}>
                 <div className={styles.header}>
                     <h1>Вход на сайт</h1>
@@ -91,7 +88,7 @@ export const AuthModal: React.FC<Props> = (props) => {
                 <button type="button"
                         onClick={registerHandler}
                         disabled={loading}
-                        className="waves-effect orange darken-1 btn btn_register"
+                        className="waves-effect orange darken-3 btn btn_register"
                 >Регистрация
                 </button>
             </form>

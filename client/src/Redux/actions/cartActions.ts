@@ -18,4 +18,4 @@ export const setItems = (items: Array<CartItemType>):setItemsActionType => ({typ
 export const addToCart = (item: CartItemType):addToCartActionType => ({type: ADD, payload: item});
 export const increaseCount = (id:number):increaseActionType => ({type: INCREASE_COUNT, payload: id});
 export const decreaseCount = (id:number):decreaseActionType => ({type: DECREASE_COUNT, payload: id});
-export const getTotalPriceActionType = (id:number):getTotalPriceActionType => ({type: GET_TOTAL_PRICE, payload: id});
+export const getTotalPrice = (id:number):getTotalPriceActionType => ({type: GET_TOTAL_PRICE, payload: id});

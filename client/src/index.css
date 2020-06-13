@@ -42,7 +42,7 @@ main {
   margin: 0 auto;
 }
 .card {
-  height: 470px;
+  min-height: 470px;
   display: flex;
   flex-direction: column;
 }
@@ -97,4 +97,38 @@ ul.right {
   border-bottom: 1px solid #e65100;
   text-align: center;
   color: #e65100;
+}
+.btn-secondary {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  font-family: Dodo, sans-serif;
+  font-weight: 500;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(186, 191, 208);
+  border-radius: 100px;
+  cursor: pointer;
+  padding: 8px 13px;
+  transition: all .2s;
+}
+.btn-secondary:hover {
+  color: #e65100;
+  border-color: #e65100;
+}
+.btn-secondary-divider {
+  display: inline-block;
+  height: 20px;
+  width: 1px;
+  opacity: 0.4;
+  position: relative;
+  top: 4px;
+  margin: 0px 12px;
+  background: rgb(255, 255, 255);
+}
+.btn-secondary-total {
+  display: inline-block;
+  min-width: 35px;
+  text-align: center;
+  position: relative;
+  left: -1px;
 }

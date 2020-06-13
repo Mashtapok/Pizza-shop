@@ -1,5 +1,6 @@
 import {INCREASE_COUNT, ADD, DECREASE_COUNT, SET_ITEMS, GET_TOTAL_PRICE} from "../actions/cartActions";
 import {CartItemType} from "../../types/types";
+import {act} from "react-dom/test-utils";
 
 let initialState = {
     items: [] as Array<CartItemType>,
@@ -13,7 +14,13 @@ export const cartReducer = (state: CartStateType = initialState, action: { type:
         case SET_ITEMS:
             return {...state, items: action.payload};
         case ADD:
-            return {...state, items: [...state.items, action.payload]};
+            const sameItem = state.items.find(item => item.id === action.payload.id);
+            debugger
+            return {...state, items: sameItem
+                ? state.items.map(item => item === sameItem ? {...item, count: item.count + action.payload.count} : item)
+                :  [...state.items, action.payload]
+                };
+
         case INCREASE_COUNT:
             return {
                 ...state,
@@ -40,13 +47,11 @@ export const cartReducer = (state: CartStateType = initialState, action: { type:
                 )
             };
         case GET_TOTAL_PRICE:
-            let newTotalPrice = state.totalPrice;
+            let newTotalPrice = 0;
             state.items.forEach((item) => {
-                if(item.id === action.payload) {
-                    newTotalPrice = item.count*item.price;
-                }
+                newTotalPrice = newTotalPrice + (item.count*item.price);
             });
-            return {...state, totalPrice: state.totalPrice+newTotalPrice};
+            return {...state, totalPrice: newTotalPrice};
         default:
             return state;
     }
