@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import {Header} from "./components/Header/Header";
-import {Footer} from "./components/Footer/Footer";
-import {Content} from "./components/Content/Content";
+import {Header} from "./components/template/Header/Header";
+import {Footer} from "./components/template/Footer/Footer";
+import {Content} from "./components/template/Content/Content";
 import {useAuth} from "./hooks/auth.hook";
 import {useDispatch, useSelector} from "react-redux";
 import { setItems } from './Redux/actions/cartActions';

@@ -1,8 +1,8 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {ProductCard} from '../common/ProductCard';
+import {ProductCard} from '../../common/ProductCard';
 import styles from "./PizzaPage.module.css";
-import {useHttp} from "../../hooks/http.hook";
-import { ProductType } from '../../types/types';
+import {useHttp} from "../../../hooks/http.hook";
+import { ProductType } from '../../../types/types';
 
 export const PizzaPage: React.FC = () => {
     const {request, loading} = useHttp();

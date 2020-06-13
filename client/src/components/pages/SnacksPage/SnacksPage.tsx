@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
-import {ProductCard} from "../common/ProductCard";
-import dodsterImage from "../../assets/images/snacks/dodster.jpg";
-import potatoeImage from "../../assets/images/snacks/potatoe.jpeg";
+import {ProductCard} from "../../common/ProductCard";
+import dodsterImage from "../../../assets/images/snacks/dodster.jpg";
+import potatoeImage from "../../../assets/images/snacks/potatoe.jpeg";
 
 export const SnacksPage: React.FC = () => {
     const [state, setState] = useState({

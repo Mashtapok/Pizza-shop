@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { AuthModal } from '../AuthModal/AuthModal';
+import { AuthModal } from '../../features/AuthModal/AuthModal';
 import {useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {RootState} from "../../../Redux/store";
 
 type Props = {
     login: (jwtToken:string, id:string) => void,

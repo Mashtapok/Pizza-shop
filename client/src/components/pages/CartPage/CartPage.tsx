@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import styles from "./CartPage.module.css";
 import {useSelector} from "react-redux";
-import {RootState} from "../../Redux/store";
+import {RootState} from "../../../Redux/store";
 import { CartItem } from "./CartItem";
 
 export const CartPage = () => {

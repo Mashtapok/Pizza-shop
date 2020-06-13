@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CartPage.module.css";
 import {useDispatch} from "react-redux";
-import {decreaseCount, increaseCount} from "../../Redux/actions/cartActions";
+import {decreaseCount, increaseCount} from "../../../Redux/actions/cartActions";
 
 type CartItemProps = {
     id: number,
