@@ -1,0 +1,76 @@
+.filterButton {
+    padding: 8px 13px;
+    margin-right: 10px;
+    background-color: transparent;
+    font-family: Dodo, sans-serif;
+    font-weight: 500;
+    border-radius: 100px;
+    transition: all .2s;
+    border: 1px solid rgb(186, 191, 208);
+    cursor: pointer;
+    outline: none;
+}
+.filterButton:hover {
+    border-color: #e65100;
+    color: #e65100;
+}
+.filterButton:focus {
+    background: transparent;
+}
+.filterButton_active {
+     background-color: #e65100;
+     color: white;
+    border: none;
+ }
+.filterButton_active:hover {
+    background-color: #e65100;
+    color: white;
+    border: none;
+}
+.filterButton_active:focus {
+    background-color: #e65100;
+    color: white;
+    border: none;
+}
+
+
+.sortContainer {
+    position: relative;
+}
+.sortCategory {
+    position: relative;
+    color: #e65100;
+    border-bottom: 1px dotted #e65100;
+    cursor: pointer;
+}
+.sortPopup {
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    margin-top: 15px;
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 160px;
+    z-index: 1;
+    display: none;
+}
+.activePopup {
+    display: block;
+}
+img.sortIcon {
+    max-height: 15px;
+    margin-right: 6px;
+}
+.sortList {
+    margin: 0;
+    padding: 0 25px !important;
+}
+.sortList > li {
+    list-style: initial !important;
+}
+.sortList > li:hover {
+    text-decoration: underline #e65100;
+}

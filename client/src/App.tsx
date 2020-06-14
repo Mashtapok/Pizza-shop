@@ -5,7 +5,7 @@ import {Footer} from "./components/template/Footer/Footer";
 import {Content} from "./components/template/Content/Content";
 import {useAuth} from "./hooks/auth.hook";
 import {useDispatch, useSelector} from "react-redux";
-import { setItems } from './Redux/actions/cartActions';
+import {getTotalPrice, setItems} from './Redux/actions/cartActions';
 import {RootState} from "./Redux/store";
 import {CartItemType} from "./types/types";
 
@@ -17,7 +17,8 @@ const App: React.FC = () => {
     useEffect(() => {
         const  cartData:Array<CartItemType> = JSON.parse(localStorage.getItem("cartItems") as string);
         if(cartData) {
-            dispatch(setItems(cartData))
+            dispatch(setItems(cartData));
+            dispatch(getTotalPrice())
         }
     }, []);
 
@@ -25,7 +26,7 @@ const App: React.FC = () => {
     const items = useSelector((state:RootState) => state.cart.items);
     const filteredItem = items.filter(item => item.count > 0);
     useEffect(() => {
-            localStorage.setItem("cartItems", JSON.stringify(filteredItem))
+            localStorage.setItem("cartItems", JSON.stringify(filteredItem));
     }, [items]);
 
     return (

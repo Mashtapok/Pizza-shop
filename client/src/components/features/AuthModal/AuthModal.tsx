@@ -1,7 +1,7 @@
 import React, {ChangeEventHandler, useEffect} from 'react';
 import styles from './AuthModal.module.css';
 import {useHttp} from "../../../hooks/http.hook";
-import { useMessage } from '../../../hooks/message.hook';
+import { useMessage, useSuccessMessage } from '../../../hooks/message.hook';
 
 type Props = {
     handleOpen: (event: React.MouseEvent, ref: any) => void,
@@ -11,6 +11,7 @@ type Props = {
 
 export const AuthModal: React.FC<Props> = (props) => {
     const message = useMessage();
+    const successMessage = useSuccessMessage();
     const {loading, error, request, clearError} = useHttp();
 
     const [form, setForm] = React.useState({
@@ -33,7 +34,9 @@ export const AuthModal: React.FC<Props> = (props) => {
                 '/api/auth/register',
                 'POST',
                 {...form});
-            const data2 = await request('/api/pizzas', 'GET', null);
+            if(data.message === "Пользователь создан") {
+                successMessage(data.message)
+            }
         } catch (error) {}
     }
 

@@ -7,3 +7,10 @@ export const useMessage = () => {
         }
     },[])
 };
+export const useSuccessMessage = () => {
+    return useCallback(text => {
+        if(window.M && text) {
+            window.M.toast({html: text, classes: "successMessage"})
+        }
+    }, [])
+};

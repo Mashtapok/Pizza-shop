@@ -14,6 +14,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Dodo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
 }
 button:focus {
   outline: none;
@@ -32,6 +33,7 @@ main {
 
 .header {
   padding: 0 10px;
+  margin: 5px 0 10px
 }
 .header h3 {
   margin: 0;
@@ -81,6 +83,10 @@ main {
 }
 .message {
   background-color: #b40707;
+  border-radius: 15px;
+}
+.successMessage {
+  background-color: #3a943e;
   border-radius: 15px;
 }
 .sidenav-overlay {

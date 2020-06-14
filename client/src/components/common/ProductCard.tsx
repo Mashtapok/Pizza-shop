@@ -30,7 +30,7 @@ export const ProductCard: React.FC<PropsType> = ({id, title, price, description,
         const {id} = item;
         let cartItem: CartItemType = {...item, count} as CartItemType;
         dispatch(addToCart(cartItem));
-        dispatch(getTotalPrice(id));
+        dispatch(getTotalPrice());
         setCount(0);
     };
 

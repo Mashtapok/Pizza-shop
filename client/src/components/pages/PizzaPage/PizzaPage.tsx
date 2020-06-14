@@ -3,6 +3,7 @@ import {ProductCard} from '../../common/ProductCard';
 import styles from "./PizzaPage.module.css";
 import {useHttp} from "../../../hooks/http.hook";
 import { ProductType } from '../../../types/types';
+import {Filters} from "../../common/Filters/Filters";
 
 export const PizzaPage: React.FC = () => {
     const {request, loading} = useHttp();
@@ -46,6 +47,9 @@ export const PizzaPage: React.FC = () => {
         <div>
             <div className="header">
                 <h3>Пиццы</h3>
+            </div>
+            <div>
+                <Filters />
             </div>
             <div className="row">
                 {state.pizzas.map((pizza) => (
