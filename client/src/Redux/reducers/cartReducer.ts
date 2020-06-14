@@ -1,4 +1,4 @@
-import {INCREASE_COUNT, ADD, DECREASE_COUNT, SET_ITEMS, GET_TOTAL_PRICE} from "../actions/cartActions";
+import {INCREASE_COUNT, ADD, DECREASE_COUNT, SET_ITEMS, GET_TOTAL_PRICE, REMOVE} from "../actions/cartActions";
 import {CartItemType} from "../../types/types";
 import {act} from "react-dom/test-utils";
 
@@ -52,6 +52,8 @@ export const cartReducer = (state: CartStateType = initialState, action: { type:
                 newTotalPrice = newTotalPrice + (item.count*item.price);
             });
             return {...state, totalPrice: newTotalPrice};
+        case REMOVE:
+            return {...state,items: state.items.filter(item => item.id !== action.payload)};
         default:
             return state;
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CartPage.module.css";
 import {useDispatch} from "react-redux";
-import {decreaseCount, increaseCount} from "../../../Redux/actions/cartActions";
+import {decreaseCount, increaseCount, removeFromCart} from "../../../Redux/actions/cartActions";
 
 type CartItemProps = {
     id: number,
@@ -42,7 +42,7 @@ export const CartItem: React.FC<CartItemProps> = ({id, title, price, description
                         <span className={styles.currency}>₽</span>
                     </div>
                     <div className={styles.line_delete}>
-                        <i className="material-icons ">delete</i>
+                        <i className="material-icons" onClick={() => dispatch(removeFromCart(id))}>delete</i>
                     </div>
                 </div>
             </div>

@@ -75,6 +75,10 @@
     border-color: rgb(255, 105, 0);
     border-image: initial;
     border-radius: 10px;
+    transition: background-color 150ms;
+}
+.button_control:hover {
+    background-color: rgba(255, 105, 0, 0.1);
 }
 .line_price {
     width: 15%;
@@ -90,11 +94,14 @@
 .line_delete {
     width: 20px;
     margin-left: 12px;
-    margin-top: -1px;
-    padding-top: 22px;
+    padding-top: 18px;
     text-align: right;
     cursor: pointer;
     flex: 0 0 auto;
+    transition: color .2s;
+}
+.line_delete:hover {
+    color: red;
 }
 .counter {
     position: relative;

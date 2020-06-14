@@ -17,7 +17,7 @@ export const CartPage = () => {
                 {filteredItem.map(item => <CartItem key={item.id} id={item.id} title={item.title} price={item.price}
                                              description={item.description}
                                              image={item.image} count={item.count}/>)}
-                {!filteredItem.length  && <p>Ваша карзина пока что пустая</p>}
+                {!filteredItem.length  && <p>Добавьте что-нибудь из меню</p>}
             </div>
         </div>
     );
