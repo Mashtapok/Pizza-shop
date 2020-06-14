@@ -9,6 +9,7 @@ export const CartPage = () => {
     const dispatch = useDispatch();
     const items = useSelector((state:RootState) => state.cart.items);
     const filteredItems = items.filter(item => item.count > 0);
+
     useEffect(() => {
         dispatch(getTotalPrice())
     }, [filteredItems]);

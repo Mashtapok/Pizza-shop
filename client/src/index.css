@@ -11,7 +11,7 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Dodo', sans-serif;
+  font-family: 'Dodo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
@@ -30,111 +30,113 @@ main {
   flex: 1 0 auto;
   margin-top: 75px;
 }
-
+nav .sidenav-trigger {
+  margin: 0 !important;
+}
 .header {
-  padding: 0 10px;
-  margin: 5px 0 10px
+padding: 0 10px;
+margin: 5px 0 10px
 }
 .header h3 {
-  margin: 0;
+margin: 0;
 }
 .myContainer {
-  max-width: 1300px;
-  padding: 0 15px;
-  margin: 0 auto;
+max-width: 1300px;
+padding: 0 15px;
+margin: 0 auto;
 }
 .card {
-  min-height: 470px;
-  display: flex;
-  flex-direction: column;
+min-height: 470px;
+display: flex;
+flex-direction: column;
 }
 .card-image {
-  padding: 10px;
-  transition: top 150ms ease-out;
+padding: 10px;
+transition: top 150ms ease-out;
 }
 .card-image img {
-  border-radius: 15px;
-  cursor: pointer;
-  transition: top 150ms ease-out;
+border-radius: 15px;
+cursor: pointer;
+transition: top 150ms ease-out;
 }
 .card-image img:hover {
-  top: 3px;
+top: 3px;
 }
 .minus-btn {
-  position: absolute;
-  bottom: -20px;
-  left: 24px;
+position: absolute;
+bottom: -20px;
+left: 24px;
 }
 .card .card-content {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0 10px 10px;
+flex: 1 1 auto;
+display: flex;
+flex-direction: column;
+padding: 0 10px 10px;
 }
 .card .card-content .card-title {
-  text-align: center;
-  margin-bottom: 0;
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 20px;
+text-align: center;
+margin-bottom: 0;
+margin-top: 15px;
+font-weight: bold;
+font-size: 20px;
 }
 .btn_register {
-  margin-left: 10px;
+margin-left: 10px;
 }
 .message {
-  background-color: #b40707;
-  border-radius: 15px;
+background-color: #b40707;
+border-radius: 15px;
 }
 .successMessage {
-  background-color: #3a943e;
-  border-radius: 15px;
+background-color: #3a943e;
+border-radius: 15px;
 }
 .sidenav-overlay {
-  left: 300px !important;
+left: 300px !important;
 }
 ul.right {
-  position: relative;
+position: relative;
 }
 .totalCartPrice {
-  position: absolute;
-  top: 42px;
-  left: 27px;
-  line-height: 19px;
-  border-bottom: 1px solid #e65100;
-  text-align: center;
-  color: #e65100;
+position: absolute;
+top: 42px;
+left: 27px;
+line-height: 19px;
+border-bottom: 1px solid #e65100;
+text-align: center;
+color: #e65100;
 }
 .btn-secondary {
-  color: rgb(0, 0, 0);
-  background-color: transparent;
-  font-family: Dodo, sans-serif;
-  font-weight: 500;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(186, 191, 208);
-  border-radius: 100px;
-  cursor: pointer;
-  padding: 8px 13px;
-  transition: all .2s;
+color: rgb(0, 0, 0);
+background-color: transparent;
+font-family: Dodo, sans-serif;
+font-weight: 500;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(186, 191, 208);
+border-radius: 100px;
+cursor: pointer;
+padding: 8px 13px;
+transition: all .2s;
 }
 .btn-secondary:hover {
-  color: #e65100;
-  border-color: #e65100;
+color: #e65100;
+border-color: #e65100;
 }
 .btn-secondary-divider {
-  display: inline-block;
-  height: 20px;
-  width: 1px;
-  opacity: 0.4;
-  position: relative;
-  top: 4px;
-  margin: 0px 12px;
-  background: rgb(255, 255, 255);
+display: inline-block;
+height: 20px;
+width: 1px;
+opacity: 0.4;
+position: relative;
+top: 4px;
+margin: 0px 12px;
+background: rgb(255, 255, 255);
 }
 .btn-secondary-total {
-  display: inline-block;
-  min-width: 35px;
-  text-align: center;
-  position: relative;
-  left: -1px;
+display: inline-block;
+min-width: 35px;
+text-align: center;
+position: relative;
+left: -1px;
 }
