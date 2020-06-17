@@ -24,21 +24,25 @@ export const PizzaPage: React.FC = () => {
         getPizzas();
     }, []);
 
+    const skeletons = Array(6).fill(0).map(item => (
+        <div className="col s12 m4 l3">
+            <ProductCard id={1}
+                         title={"Вкусная пицца"}
+                         price={299}
+                         description={"Описание самой вкусной пиццы"}
+                         image={"https://cdn.dodostatic.net/site-static/dist/fdb09565b56cb9ae35ac.svg"}
+
+            />
+        </div>
+    ));
+
     if (loading) {
         return <div>
             <div className="header">
                 <h3>Пиццы</h3>
             </div>
             <div className="row">
-                <div className="col s12 m4 l3">
-                    <ProductCard id={1}
-                                 title={"Пицца"}
-                                 price={299}
-                                 description={"описание"}
-                                 image={"https://cdn.dodostatic.net/site-static/dist/fdb09565b56cb9ae35ac.svg"}
-
-                    />
-                </div>
+                {skeletons}
             </div>
         </div>
     }

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useState} from "react";
 import sortIcon from "../../../assets/images/icons/sort-icon.svg";
 import "./filters.css";
 
