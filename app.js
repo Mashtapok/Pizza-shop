@@ -30,7 +30,7 @@ async function start() {
             useUnifiedTopology: true,
             useCreateIndex: true
         });
-        app.listen(PORT, () => console.log(`App on port ${PORT}`));
+        app.listen(PORT, () => console.log(`App start on port ${PORT}`));
     } catch (e) {
         console.warn("Server Error", e.message);
         process.exit(1);

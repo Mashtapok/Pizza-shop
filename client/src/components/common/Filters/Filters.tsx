@@ -1,11 +1,21 @@
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 import sortIcon from "../../../assets/images/icons/sort-icon.svg";
 import "./filters.css";
+import {useClickOutside} from "../../../hooks/useClickOutSide";
 
-export const Filters = () => {
+type Props = {
+    sortPrice: () => void;
+    sortPopular:() => void;
+    sortTitle:() => void
+};
+
+export const Filters:React.FC<Props> = ({sortPrice, sortPopular, sortTitle}) => {
+    const sortPopup = useRef<HTMLSpanElement>(null);
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const [sortCategory, setSortCategory] = useState('popular');
     const popupClasses = isPopoverOpen ? 'sortPopup activePopup' : 'sortPopup';
+
+    useClickOutside(sortPopup, () => setIsPopoverOpen(false));
 
     const sortHandler = (category: string): void => {
         setSortCategory(category);
@@ -28,17 +38,34 @@ export const Filters = () => {
             break
     }
 
+    const popularSortHandler = () => {
+        sortPopular();
+        sortHandler('popular')
+    };
+
+    const priceSortHandler = () => {
+        sortPrice();
+        sortHandler('price')
+    };
+
+    const titleSortHandler = () => {
+        sortTitle();
+        sortHandler('title')
+    };
+
     return (
         <div className="myContainer">
             <div className='sortContainer'>
                 <span><img src={sortIcon} className="sortIcon"/>Сортировка по: </span>
-                <span className="sortCategory" onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
+                <span ref={sortPopup}
+                      className="sortCategory"
+                      onClick={() => isPopoverOpen ? setIsPopoverOpen(false) : setIsPopoverOpen(true)}>
                     {currentSortCategoryText}
                     <div className={popupClasses} >
                         <ul className="sortList">
-                            <li onClick={() => sortHandler('popular')}>популярности</li>
-                            <li onClick={() => sortHandler('price')}>цене</li>
-                            <li onClick={() => sortHandler('title')}>названию</li>
+                            <li onClick={popularSortHandler}>популярности</li>
+                            <li onClick={priceSortHandler}>цене</li>
+                            <li onClick={titleSortHandler}>названию</li>
                         </ul>
                     </div>
                 </span>

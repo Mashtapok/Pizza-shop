@@ -15,7 +15,6 @@ export const cartReducer = (state: CartStateType = initialState, action: { type:
             return {...state, items: action.payload};
         case ADD:
             const sameItem = state.items.find(item => item.id === action.payload.id);
-            debugger
             return {...state, items: sameItem
                 ? state.items.map(item => item === sameItem ? {...item, count: item.count + action.payload.count} : item)
                 :  [...state.items, action.payload]

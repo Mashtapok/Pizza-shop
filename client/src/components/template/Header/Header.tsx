@@ -58,7 +58,7 @@ export const Header: React.FC<Props> = (props) => {
                     <a data-target="mobile-menu" className="black-text sidenav-trigger"><i
                         className="material-icons">menu</i></a>
 
-                    <a className="black-text brand-logo center">KokoPizza</a>
+                    <a className="black-text brand-logo center">КоКо пицца</a>
                     <ul className="right hide-on-med-and-down">
                         {authData.isAuth && <li>
                             <NavLink to="/lk" className="black-text">Личный кабинет</NavLink></li>}

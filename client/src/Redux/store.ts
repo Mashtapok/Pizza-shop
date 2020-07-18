@@ -4,7 +4,9 @@ import thunkMiddleware from "redux-thunk";
 import {cartReducer} from "./reducers/cartReducer";
 import {authReducer} from "./reducers/authReducer";
 
-export interface RootState {
+export type RootState = ReturnType<typeof reducers>;
+
+interface RootState1 {
     cart: {
         items: [
             {
